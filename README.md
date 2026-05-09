@@ -1,3 +1,5 @@
+<h2 align="center"> A mirror of <a href="https://github.com/thororen1234/publish-browser-extension">this repo</a> because I forgot to fork it here </h2>
+
 <h1 align="center">Publish Browser Extension</h1>
 <p align="center">Publish an extension to all the extension stores in a single command!</p>
 
