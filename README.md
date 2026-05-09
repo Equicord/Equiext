@@ -1,8 +1,6 @@
 <h1 align="center">Publish Browser Extension</h1>
 <p align="center">Publish an extension to all the extension stores in a single command!</p>
 
-https://github.com/aklinker1/publish-browser-extension/assets/10101283/b0e856ca-4e26-4c7e-9ff8-c900e203cab5
-
 ## Features
 
 - Publish to the **Chrome Web Store**, **Firefox Addon Store**, and **Edge Addon Store**
@@ -11,14 +9,14 @@ https://github.com/aklinker1/publish-browser-extension/assets/10101283/b0e856ca-
 
 > [!IMPORTANT]
 >
-> You are responsible for uploading and submitting an extension for the first time by hand. `publish-browser-extension` does not provide tools for creating a new extension.
+> You are responsible for uploading and submitting an extension for the first time by hand. `@equicord/publish-browser-extension` does not provide tools for creating a new extension.
 
 ## Install
 
 ```sh
-npm i -D publish-browser-extension
-pnpm i -D publish-browser-extension
-bun i -D publish-browser-extension
+npm i -D @equicord/publish-browser-extension
+pnpm i -D @equicord/publish-browser-extension
+bun i -D @equicord/publish-browser-extension
 ```
 
 ## CLI Usage
@@ -46,7 +44,7 @@ publish-extension \
 
 <!-- prettier-ignore -->
 ```js
-import { publishExtension } from 'publish-browser-extension';
+import { publishExtension } from '@equicord/publish-browser-extension';
 
 publishExtension({
   dryRun: true,
@@ -82,27 +80,27 @@ publishExtension({
   .catch(err => console.error(err));
 ```
 
-## Contributing
-
-<a href="https://github.com/aklinker1/publish-browser-extension/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=aklinker1/publish-browser-extension" />
-</a>
-
 ### Contributor Setup
 
 1. Install [bun](https://bun.sh/)
 2. Install dependencies
+
    ```sh
    bun i
    ```
+
 3. Run the `init` command to generate a `.env.submit` file for testing
+
    ```sh
    bun publish-extension init
    ```
+
    > [!WARNING]
    >
    > Make sure to set the Firefox channel to "unlisted", chrome's publish target to "trustedTesters", and don't submit the extension for review for Chrome or Edge. This will prevent you from accidentally releasing one of the test extensions publicly.
+
 4. Run the dev commands to upload a test extension to the stores:
+
    ```sh
    bun dev:all
    bun dev:chrome
